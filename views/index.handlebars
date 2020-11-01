@@ -1,0 +1,35 @@
+<h1>BURGERS!</h1>
+
+<h2>Which Burger Would You Like?</h2>
+
+<ul>
+  {{#each burgers}}
+  {{#unless devoured}}
+    <h1>{{this.burger_name}}</h1>
+    <button burgerId={{this.id}} class="devour-status">Devour</button>
+  {{/unless}}
+  {{/each}}
+</ul>
+
+{{!-- <h1>Cats!</h1>
+
+<h2>Cats that are not sleepy!</h2>
+
+<ul>
+  {{#each cats}}
+    {{#unless sleepy}}
+      {{> cats/cat-block sleep=true}}
+    {{/unless}}
+  {{/each}}
+</ul> --}}
+
+
+{{!-- <h2>Cats that are sleepy!</h2>
+
+<ul>
+  {{#each cats}}
+    {{#if sleepy}}
+      {{> cats/cat-block sleep=false}}
+    {{/if}}
+  {{/each}}
+</ul> --}}

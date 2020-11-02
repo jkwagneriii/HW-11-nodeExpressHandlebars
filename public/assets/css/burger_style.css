@@ -1,0 +1,22 @@
+body {
+    background-image: url("https://cdn.pixabay.com/photo/2017/02/01/10/17/condiments-2029404_960_720.png");
+}
+
+h1, h2, h3, ul {
+    text-align: center;
+}
+
+.create-form {
+    text-align: center;
+}
+
+#burgBtn {
+    margin-top: 10px;
+}
+
+.image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+}

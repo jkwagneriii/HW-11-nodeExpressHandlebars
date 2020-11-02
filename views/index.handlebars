@@ -1,11 +1,15 @@
 <h1>BURGERS!</h1>
 
+<div id="burg-image">
+    <img class="image" src="https://cdn.pixabay.com/photo/2017/02/05/21/06/burger-2041192_960_720.jpg">
+</div>
+
 <h2>Which Burger Would You Like?</h2>
 
 <ul>
   {{#each burgers}}
   {{#unless devoured}}
-    <h1>{{this.burger_name}}</h1>
+    <h3>{{this.burger_name}}</h3>
     <button burgerId={{this.id}} class="devour-status">Devour</button>
   {{/unless}}
   {{/each}}
@@ -16,7 +20,7 @@
 <ul>
   {{#each burgers}}
     {{#if devoured }}
-      <h1>{{this.burger_name}}</h1>
+      <h3>{{this.burger_name}}</h3>
     {{/if}}
   {{/each}}
 </ul>

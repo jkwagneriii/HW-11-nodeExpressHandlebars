@@ -29,5 +29,38 @@
     <input type="text" id="burger-name" name="name">
   </div>
 
-  <button type="submit">Add New Burger</button>
+  <button id="burgBtn" type="submit">Add New Burger</button>
 </form>
+
+
+
+
+<script>
+
+  $('#burgBtn').on('click', function(event) {
+    event.preventDefault()
+    console.log('CLICKED', $('#burger-name').val())
+    $.ajax({
+        url: '/api/addnew',
+        data: {name:$('#burger-name').val()},
+        type: 'POST'
+      }).then(function (data) {
+        window.location.reload();
+    })
+  });
+
+  $('.devour-status').on('click', function (event) {
+    event.preventDefault();
+    console.log('CLICKED')
+    $.ajax({
+      url: '/api/devoured/' + $(this).attr('burgerId'),
+      type: 'PUT'
+    }).then(function (data) {
+      window.location.reload();
+    })
+  });
+
+  
+
+
+</script>
